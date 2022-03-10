@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-  likedPostsId.plus(id);
+  likedPostsId.push(id);
   showPosts(posts);
 };
 
@@ -90,10 +90,9 @@ const createPost = (post) => {
               <div class="post__footer">
                 <div class="post__buttons">
                   <button class="post__button" onclick="addToLiked(${post.id})">
-                  <i class="fa-solid fa-heart ${
-                    isLiked(post.id) && "text-danger"
-                  }"></i>
-                    
+                  <i class="fa-solid fa-heart 
+                    ${isLiked(post.id) && "text-danger"}">
+                  </i>
                   </button>
                   <button class="post__button">
                     <i class="fa-solid fa-comment"></i>
@@ -102,16 +101,14 @@ const createPost = (post) => {
 
                   <div class="post__indicators"></div>
 
-                  <button class="post__button post__button--align-right" onclick="reportPost(${
-                    post.id
-                  })">
+                  <button class="post__button post__button--align-right" onclick="reportPost(
+                    ${post.id})">
                     <i class="fa-solid fa-ban"></i>
                   </button>
                 </div>
 
-                <div class="post__content">${displayContent(
-                  post.description
-                )}</div>
+                <div class="post__content">
+                ${displayContent(post.description)}</div>
 
                 <div class="post__infos">
                   <div class="post__likes">
@@ -147,6 +144,8 @@ const showPosts = (posts) => {
 
   posts.forEach((post) => {
     const div = createPost(post);
+    console.log(post.id);
+
     productsContainer.appendChild(div);
   });
 };
