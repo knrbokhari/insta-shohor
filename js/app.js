@@ -144,25 +144,27 @@ const showPosts = (posts) => {
 
   posts.forEach((post) => {
     const div = createPost(post);
-    console.log(post.id);
-
     productsContainer.appendChild(div);
   });
 };
 
 const displayLikedPosts = () => {
   const likedPosts = getLikedPosts();
+  const likedDiv = document.getElementById("liked");
+  likedDiv.innerHTML = "";
   likedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("liked").appendChild(div);
+    likedDiv.appendChild(div);
   });
 };
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
+  const reportedDiv = document.getElementById("reported");
+  reportedDiv.innerHTML = "";
   reportedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("reported").appendChild(div);
+    reportedDiv.appendChild(div);
   });
 };
 
