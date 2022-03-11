@@ -59,19 +59,25 @@
     </main>
     <section style="width: 90%;margin: 0 auto;">
         <h3>1. How does javascript works?</h3>
-        <p style="font-size: 16px;">JavaScript একটি scripting language। এটি একটি interpreted language, যার মানে এটির
-            কম্পাইলারের প্রয়োজন নেই।
-            JavaScript কোড সরাসরি একটি ওয়েব ব্রাউজারে চলে। JavaScript ইঞ্জিন script পড়ে।
-            তারপর এটি মেশিন ভাষায় script কম্পাইল করে এবং তারপর মেশিন কোড রান করে। JavaScript dynamic ভাবে ওয়েব
-            পৃষ্ঠাগুলির উপাদান নিয়ন্ত্রণ করে। এটি ওয়েব ব্রাউজার, API এবং ওয়েব সার্ভারেও কাজ করে।</p>
+        <p class="fs-4">
+            JavaScript একটি High-level, single-threaded, interpreted programming language। যার
+            মানে এটির কম্পাইলারের প্রয়োজন নেই। JavaScript কোড সরাসরি একটি ওয়েব ব্রাউজারে চলে। JavaScript একটি
+            scripting language। যখনই আমরা একটি ওয়েব ব্রাউজারের ভিতরে একটি JavaScript প্রোগ্রাম চালাই তখন ব্রাউজারের
+            ইঞ্জিন script পড়ে। তারপর এটি মেশিন ভাষায় compile করে এবং তারপর মেশিন কোড রান
+            করে। JavaScript dynamic ভাবে ওয়েব পৃষ্ঠাগুলির উপাদান নিয়ন্ত্রণ করে। এটি ওয়েব ব্রাউজার, API এবং ওয়েব
+            সার্ভারেও ব্যবহার করা হয়।
+        </p>
         <h3>2. Difference between localStorage and sessionStorage?</h3>
         <ul>
-            <li style="font-size: 16px;">LocalStorage a stored ডেটা ব্রাউজারে সেশনে সংরক্ষণ করা হয়। তাই domain a নতুন
-                ট্যাবে ওপেন করা হলেও বা ব্রাউজার বন্ধ করে পুনরায় খোলা হলেও storage data সেভ হয়ে থাকে।</li>
-            <li style="font-size: 16px;">পেজ end করলে sessionStorage cleared হয়ে যায়। একটি পেজ যতক্ষণ ট্যাব বা
+            <li class="fs-4">
+                LocalStorage a stored ডেটা ব্রাউজারে সেশনে সংরক্ষণ করা হয়। তাই domain a নতুন
+                ট্যাবে ওপেন করা হলেও বা ব্রাউজার বন্ধ করে পুনরায় খোলা হলেও storage data সেভ হয়ে থাকে। LocalStorage এ
+                5MB/10MB data stored করা যায়। এর data via javascript বা manually delete করতে হয়।
+            </li>
+            <li class="fs-4">
+                পেজ end করলে sessionStorage cleared হয়ে যায়। একটি পেজ যতক্ষণ ট্যাব বা
                 ব্রাউজারে খোলা থাকে sessionStorage ততক্ষণ স্থায়ী হয়ে থাকে। যখন আমরা একটি নতুন ট্যাব বা একটি নতুন
                 উইন্ডো খুলি, এটি তখন একটি নতুন সেশন এবং নতুন storage তৈরি করে।
-
             </li>
         </ul>
     </section>
